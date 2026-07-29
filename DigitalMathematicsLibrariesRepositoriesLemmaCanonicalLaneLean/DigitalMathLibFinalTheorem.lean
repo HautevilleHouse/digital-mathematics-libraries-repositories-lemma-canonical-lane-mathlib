@@ -1,0 +1,17 @@
+import canonicalLaneMathlib.AdmissibleClass
+import DigitalMathematicsLibrariesRepositoriesLemmaCanonicalLaneLean.DigitalMathLibAdmissibleClass
+import DigitalMathematicsLibrariesRepositoriesLemmaCanonicalLaneLean.DigitalMathLibBridgeLemmas
+import DigitalMathematicsLibrariesRepositoriesLemmaCanonicalLaneLean.DigitalMathLibGateLemmas
+
+namespace HautevilleHouse
+namespace DigitalMathematicsLibrariesRepositoriesLemmaCanonicalLaneLean
+
+def ConstrainedDigitalMathLibClosure (A : DigitalMathLibAdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem constrained_digital_math_lib_endgame (A : DigitalMathLibAdmissibleClass) :
+    ConstrainedDigitalMathLibClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end DigitalMathematicsLibrariesRepositoriesLemmaCanonicalLaneLean
+end HautevilleHouse
